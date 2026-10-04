@@ -1,4 +1,5 @@
-# 🌳 The Grove of Trials — Enchanted Grove Hackathon Project
+#🌳 The Grove of Trials 
+Enchanted Grove Hackathon Project
 
 **Team:** Sandra Elza Thomas · Samiyah Harrison · Hannah
 
@@ -21,7 +22,7 @@ Open `index.html` in a browser. No build step, no installs.
 ## 🌐 Deploy on GitHub Pages
 1. Put `index.html`, `style.css`, `script.js` (and this README) in the repo root.
 2. **Settings → Pages →** Branch `main`, folder `/ (root)` → Save.
-3. Your site goes live at `https://<username>.github.io/<repo>/`.
+3. Your site goes live at(https://sandraelzatom.github.io/hackathon_2026/).
 
 ## 🧠 Notes / Future work
 - Data (users, notes, points) is saved in `localStorage`; a backend (Firebase/Supabase) would share the tree across all users.
