@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Grove of Trials</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌳</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="aurora"></div><div id="moon"></div><div id="pines"></div><div id="fog"></div>
+<canvas id="fireflies"></canvas>
+
+<nav id="nav" class="hidden">
+  <span class="logo">🌳 Grove of Trials</span>
+  <div class="links">
+    <a data-go="trials">Grove of Trials</a>
+    <a data-go="tree">Memory Tree</a>
+    <a data-go="music">Music Glade</a>
+    <a data-go="awaken">Awakening</a>
+    <a data-go="team">Team</a>
+  </div>
+  <div class="who"><span id="dew">✨ 0</span><span id="user"></span><button id="logout">Logout</button></div>
+</nav>
+
+<!-- LOGIN / ENTRANCE -->
+<section id="login" class="page active">
+  <h1>The Grove of Trials</h1>
+  <p class="tag" id="tag">“Welcome to the Grove of Trials. Nourish the forest with knowledge, and illuminate each other with warmth.”</p>
+  <form id="loginForm" class="card">
+    <h2>Enter the Grove</h2>
+    <input id="name" placeholder="Your wanderer name" required maxlength="20">
+    <input id="pass" type="password" placeholder="Secret rune (password)" required minlength="3">
+    <button class="glow" type="submit">Step Inside ✦</button>
+    <small>New wanderers are registered automatically.</small>
+    <small id="err"></small>
+  </form>
+  <button id="soundBtn" class="ghost">🔇 Forest sounds</button>
+</section>
+
+<!-- TRIALS -->
+<section id="trials" class="page">
+  <h2 class="title">The Grove of Trials</h2>
+  <div id="setup" class="card wide">
+    <p>Paste your course notes. The grove's magic turns them into trials.</p>
+    <textarea id="notes" rows="7" placeholder="Paste notes here (full sentences work best)…"></textarea>
+    <div class="row"><button class="glow" id="gen">Conjure Questions ✦</button><button class="ghost" id="demo">Use sample scroll</button></div>
+  </div>
+  <div id="quiz" class="card wide hidden parchment">
+    <div class="row between"><span id="qn"></span><span id="combo"></span></div>
+    <h3 id="q"></h3><div id="opts"></div><p id="fb"></p>
+    <button class="glow hidden" id="next">Next ➜</button>
+  </div>
+</section>
+
+<!-- TREE -->
+<section id="tree" class="page">
+  <h2 class="title">The Memory Tree</h2>
+  <p class="sub">Click a glowing fruit to read a whisper. Hang your own blessing for 50 ✨.</p>
+  <div id="treeBox"><svg id="trunk" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M46 100 C47 70 44 60 40 48 C30 40 18 30 14 12 M50 100 L50 40 M54 100 C53 70 56 60 60 48 C70 40 82 30 86 12 M50 55 C40 45 34 30 36 10 M50 55 C60 45 66 30 64 10" stroke="#5a3b1e" stroke-width="3" fill="none" stroke-linecap="round"/></svg><div id="fruits"></div></div>
+  <div class="card wide">
+    <textarea id="wish" rows="2" maxlength="140" placeholder="Write encouragement for another student…"></textarea>
+    <div class="row"><button class="ghost" id="polish">🪄 Polish with Magic</button><button class="glow" id="hang">Hang Blessing (50 ✨)</button></div>
+  </div>
+</section>
+
+<!-- AWAKENING -->
+<section id="awaken" class="page">
+  <h2 class="title">Forest Awakening</h2>
+  <div class="stats"><div><b id="sDew">0</b>Starlight Dew</div><div><b id="sMast">0</b>Concepts Mastered</div><div><b id="sBless">0</b>Blessings Hung</div></div>
+  <p class="sub" id="stage"></p>
+  <div id="meter"><i id="bar"></i></div>
+  <button class="ghost" id="share">Share my glow</button>
+</section>
+
+<!-- MUSIC -->
+<section id="music" class="page">
+  <h2 class="title">The Music Glade</h2>
+  <p class="sub">Eight living soundscapes, composed live by the forest itself. Close your eyes.</p>
+  <div id="tracks"></div>
+  <div class="row"><button class="ghost" id="pp">⏸ Pause</button><input type="range" id="vol" min="0" max="1" step=".01" value=".7"></div>
+  <p class="sub" id="now">Choose a melody…</p>
+</section>
+
+<!-- TEAM -->
+<section id="team" class="page">
+  <h2 class="title">The Grove Keepers</h2>
+  <div class="stats"><div><b>Sandra Elza Thomas</b></div><div><b>Samiyah Harrison</b></div><div><b>Hannah</b></div></div>
+  <p class="sub">Our first hackathon. Theme: Enchanted Grove.<br>“Here, you aren't just gaining knowledge for yourself — you're leaving a spark of light to guide everyone else in the forest.”</p>
+</section>
+
+<div id="modal" class="hidden"><div class="card parchment"><p id="mText"></p><small id="mBy"></small><div class="row"><button class="glow" id="infuse">💛 Infuse Energy</button><button class="ghost" id="mClose">Close</button></div></div></div>
+<script src="script.js"></script>
+</body>
+</html>
